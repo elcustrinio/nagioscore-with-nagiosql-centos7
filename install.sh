@@ -1,13 +1,13 @@
 #!/bin/sh
 
-#Variablendefinitionen
+#variable definitions
 downloadverzeichnis=/tmp/
 nagiosversion=4.4.3
 nagiospluginsversion=2.2.1
 nagiosuser=nagiosadmin
 nagiosuserpassword=nagiosadmin
 
-#Ab hier nichts mehr ändern ausser Kennwort für MariaDB Server.
+#From here nothing more change except password for MariaDB server.
 
 yum install -y gcc glibc glibc-common wget unzip httpd php gd gd-devel perl postfix wget bzip2
 sed -i 's/SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
@@ -36,7 +36,7 @@ systemctl start httpd.service
 systemctl start nagios.service
 systemctl daemon-reload
 
-#Installation von NagiosPlugins
+#Installation NagiosPlugins
 yum install -y perl-Net-SNMPyum install -y gcc glibc glibc-common make gettext automake autoconf wget openssl-devel net-snmp net-snmp-utils epel-release
 yum install -y perl-Net-SNMP
 cd $downloadverzeichnis/nagiosinstall
@@ -49,7 +49,7 @@ make install
 systemctl restart httpd.service
 systemctl restart nagios.service
 
-#Installation von MariaDB Server
+#Installation MariaDB Server
 yum install -y mariadb-server
 systemctl enable mariadb.service
 systemctl start mariadb.service
@@ -64,7 +64,7 @@ y
 y
 EOF
 
-#Installation von Epel
+#Installation Epel
 yum install -y epel-release
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 yum makecache fast
@@ -77,7 +77,7 @@ echo "date.timezone='Europe/Zurich'" >> /etc/php.ini
 echo "extension=ssh2.so" >> /etc/php.ini
 systemctl restart httpd
 
-#Installation von NagiosQL
+#Installation NagiosQL
 cd $downloadverzeichnis/nagiosinstall
 wget https://sourceforge.net/projects/nagiosql/files/nagiosql/NagiosQL%203.4.0/nagiosql-3.4.0.tar.bz2
 tar xvjf nagiosql-3.4.0.tar.bz2
@@ -86,13 +86,13 @@ restorecon -Rv /var/www/html/nagiosql/
 mkdir /usr/local/nagios/etc/nagiosql
 chown apache:apache /usr/local/nagios/etc/nagiosql/
 chmod o+w /var/www/html/nagiosql/config
-echo "Installation of NagiosCore and NagiosQL is finished.Please visit https://ipadresse/nagiosql and follow the wizard." 
-read -n 1 -s -r -p "Drücke eine Taste sobald die NagiosQL Installation via Webinterface angeschlossen ist und die Konfigurationen importiert bzw. erstellt wurden.\n"
-#Erst weiter wenn Konfig angepasst und erstellt.
-echo "Wir räumen nun noch etwas auf...\n" 
+echo "Installation of NagiosCore and NagiosQL is finished.Please visit https://ipadresse/nagiosql and follow the wizard. You find the Screenshots with the Settings in the ReadMe." 
+read -n 1 -s -r -p "Press a button as soon as the NagiosQL installation via Webwizard has been completed and the configurations have been imported or created."
+#NagiosQL has been installed, we can now delete install directory to prevent anyone to run installation wizard again. We have successfully generated settings.php file. Therefore, revoke write permissions from other users for security.
 rm -rf /var/www/html/nagiosql/nagiosql-3.4.0/install/
 chmod o-w /var/www/html/nagiosql/config
+#Finally, we have to edit nagios.cfg file to remove current cfg_dir directives and add our new configuration directory actively managed by NagiosQL. This can be achieved by following two commands.
 sed -i 's/^cfg/#cfg/' /usr/local/nagios/etc/nagios.cfg
 echo "cfg_dir=/usr/local/nagios/etc/nagiosql/" >> /usr/local/nagios/etc/nagios.cfg
 systemctl restart nagios.service
-echo "Alles erledigt. Happy Monitoring." 
+echo "We have successfully installed NagiosQL Nagios Configurator on CentOS 7 server. Happy Monitoring!" 
