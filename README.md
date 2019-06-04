@@ -49,4 +49,34 @@ Login as admin user
 
 ![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-installation-wizard-06.png)
 
+NagiosQL is installed with zero configurations, therefore, we have to import our existing Nagios Core configurations.
+Go to Administration > Config Targets.
+
+![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-config-target-01.png)
+
+Click on Modify under Function column.
+
+![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-config-target-02.png)
+
+Adjust directory paths according to you environment and click on Save.
+Go to Tools > Data Import.
+Select all import files and click on Import.
+
+![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-config-target-03.png)
+
+Go to Supervision tab and you may observe that there are now some active groups has been imported
+
+![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-config-target-04.png)
+
+File status is missed because we haven’t save our files yet. Therefore, Click on Write all config files.
+
+![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-config-target-05.png)
+
+You may observe that the file status is now up-to-date.
+Repeat the process for other targets/configurations like hosts, commands, templates, etc to save them in NagiosQL configure directory.
+
+When you are finished go back to you Script Window and click any Button. If everyhting is okay you get a message.
+
+If you have performed above steps correctly, then there should be no error.
+We have successfully installed NagiosQL Nagios Configurator on CentOS 7 server.
 
