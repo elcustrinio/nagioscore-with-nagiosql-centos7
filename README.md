@@ -8,7 +8,7 @@ With this script you install Nagios Core with NagiosQL on CentOs7.
 
 1) Clone or copy the install.sh on your fresh installed CentOs7
 2) Navigate to the folder in which the script is located
-3) Open the Script and change if needed the NagiosVersion the NagiosPluginsVersions and Nagios Username/Password under "Variablendefinitionen" (it's tested with NagiosCore 4.4.3 and Nagios Plugins Version 2.2.1)
+3) Open the Script and change if needed the NagiosVersion the NagiosPluginsVersions and Nagios Username/Password under "variable definitions" (it's tested with NagiosCore 4.4.3 and Nagios Plugins Version 2.2.1)
 and the Root Password for MariaDB on Line 59 and 60.
 4) Remove special Characters: "sed -i 's/\r//' install.sh"
 5) Make the Script executable with "chmod +x install.sh"
@@ -16,8 +16,7 @@ and the Root Password for MariaDB on Line 59 and 60.
 
 The script is more or less automated but needs a few places currently still inputs.
 These are:
-
-- During the Installation Process you will be ask for the libssh2 prefix. Default its autodetected if you wanna use this confirm with enter
+During the Installation Process you will be ask for the libssh2 prefix. Default its autodetected if you wanna use this confirm with enter
 
 After NagiosQL is installed you see a message that the Installation is done and you should visit http://ipadress/nagiosql and follow the wizard.Do not click any button until the wizard is not completed. Here are the PrintScreens with the Settings you need:
 
