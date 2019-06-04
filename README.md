@@ -82,6 +82,7 @@ File status is missed because we haven’t save our files yet. Therefore, Click 
 
 You may observe that the file status is now up-to-date.
 Repeat the process for other targets/configurations like hosts, commands, templates, etc to save them in NagiosQL configure directory.
+After that go to Tools > Control Nagios and Click on Check Configurationfiles. You should get no error if you save all Configurationfiles in every section.
 
 When you are finished go back to you ScriptWindow and click any Button. If everything is okay you get a message.
 
