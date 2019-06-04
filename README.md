@@ -18,6 +18,8 @@ The script is more or less automated but needs a few places currently still inpu
 These are:
 
 - During the Installation Process you will be ask for the libssh2 prefix. Default its autodetected if you wanna use this confirm with enter
-- After NagiosQL is installed visit http://ipadress/nagiosql and follow the steps.
+- After NagiosQL is installed you see a message that the Installation is done and you should visit http://ipadress/nagiosql and follow the wizard. Here are the PrintScreens with the Settings you need:
+
+
 
 
