@@ -88,3 +88,4 @@ When you are finished go back to you ScriptWindow and click any Button. If every
 If you have performed above steps correctly, then there should be no error.
 We have successfully installed NagiosQL Nagios Configurator on CentOS 7 server.
 
+Visit: http://ipadress/nagios for Nagios or http://ipaddr/nagiosql for NagiosQL
