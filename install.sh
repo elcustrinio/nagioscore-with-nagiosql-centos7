@@ -56,8 +56,8 @@ systemctl start mariadb.service
 mysql_secure_installation <<EOF
 
 y
-dasisteintest
-dasisteintest
+rootpassword
+rootpassword
 y
 y
 y
