@@ -1,11 +1,13 @@
 #!/bin/sh
 
-#Variablendefinition
+#Variablendefinitionen
 downloadverzeichnis=/tmp/
 nagiosversion=4.4.3
 nagiospluginsversion=2.2.1
 nagiosuser=nagiosadmin
 nagiosuserpassword=nagiosadmin
+
+#Ab hier nichts mehr ändern ausser Kennwort für MariaDB Server.
 
 yum install -y gcc glibc glibc-common wget unzip httpd php gd gd-devel perl postfix wget bzip2
 sed -i 's/SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
@@ -34,6 +36,7 @@ systemctl start httpd.service
 systemctl start nagios.service
 systemctl daemon-reload
 
+#Installation von NagiosPlugins
 yum install -y perl-Net-SNMPyum install -y gcc glibc glibc-common make gettext automake autoconf wget openssl-devel net-snmp net-snmp-utils epel-release
 yum install -y perl-Net-SNMP
 cd $downloadverzeichnis/nagiosinstall
@@ -43,10 +46,10 @@ cd $downloadverzeichnis/nagiosinstall/nagios-plugins-$nagiospluginsversion/
 ./configure
 make
 make install
-
 systemctl restart httpd.service
 systemctl restart nagios.service
 
+#Installation von MariaDB Server
 yum install -y mariadb-server
 systemctl enable mariadb.service
 systemctl start mariadb.service
@@ -61,6 +64,7 @@ y
 y
 EOF
 
+#Installation von Epel
 yum install -y epel-release
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 yum makecache fast
@@ -73,7 +77,7 @@ echo "date.timezone='Europe/Zurich'" >> /etc/php.ini
 echo "extension=ssh2.so" >> /etc/php.ini
 systemctl restart httpd
 
-
+#Installation von NagiosQL
 cd $downloadverzeichnis/nagiosinstall
 wget https://sourceforge.net/projects/nagiosql/files/nagiosql/NagiosQL%203.4.0/nagiosql-3.4.0.tar.bz2
 tar xvjf nagiosql-3.4.0.tar.bz2
@@ -84,6 +88,7 @@ chown apache:apache /usr/local/nagios/etc/nagiosql/
 chmod o+w /var/www/html/nagiosql/config
 echo "Installation abgeschlossen. Bitte navigiere zu https://ipadresse/nagiosql um die Installation abzuschliessen." 
 read -n 1 -s -r -p "Drücke eine Taste sobald die NagiosQL Installation via Webinterface angeschlossen ist und die Konfigurationen importiert bzw. erstellt wurden.\n"
+#Erst weiter wenn Konfig angepasst und erstellt.
 echo "Wir räumen nun noch etwas auf...\n" 
 rm -rf /var/www/html/nagiosql/nagiosql-3.4.0/install/
 chmod o-w /var/www/html/nagiosql/config
