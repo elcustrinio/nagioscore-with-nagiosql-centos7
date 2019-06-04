@@ -76,7 +76,7 @@ File status is missed because we haven’t save our files yet. Therefore, Click 
 You may observe that the file status is now up-to-date.
 Repeat the process for other targets/configurations like hosts, commands, templates, etc to save them in NagiosQL configure directory.
 
-When you are finished go back to you Script Window and click any Button. If everyhting is okay you get a message.
+When you are finished go back to you ScriptWindow and click any Button. If everything is okay you get a message.
 
 If you have performed above steps correctly, then there should be no error.
 We have successfully installed NagiosQL Nagios Configurator on CentOS 7 server.
