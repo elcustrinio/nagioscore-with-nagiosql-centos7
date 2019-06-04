@@ -6,7 +6,9 @@ second time when the problem has been resolved. Nagios Core is primary applicati
 hundred of Nagios Projects are built.
 
 **NagiosQL**
+
 NagiosQL is a web based configurator for Nagios Core. It completely integrates with Nagios Core and makes configuration management much easier. 
+
 
 **With this script you install Nagios Core with NagiosQL on CentOs7.**
 
