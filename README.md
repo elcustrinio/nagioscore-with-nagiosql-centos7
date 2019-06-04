@@ -18,7 +18,10 @@ The script is more or less automated but needs a few places currently still inpu
 These are:
 
 - During the Installation Process you will be ask for the libssh2 prefix. Default its autodetected if you wanna use this confirm with enter
-- After NagiosQL is installed you see a message that the Installation is done and you should visit http://ipadress/nagiosql and follow the wizard. Here are the PrintScreens with the Settings you need:
+
+After NagiosQL is installed you see a message that the Installation is done and you should visit http://ipadress/nagiosql and follow the wizard. Here are the PrintScreens with the Settings you need:
+
+https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-installation-wizard-01.png
 
 
 
