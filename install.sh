@@ -86,7 +86,7 @@ restorecon -Rv /var/www/html/nagiosql/
 mkdir /usr/local/nagios/etc/nagiosql
 chown apache:apache /usr/local/nagios/etc/nagiosql/
 chmod o+w /var/www/html/nagiosql/config
-echo "Installation abgeschlossen. Bitte navigiere zu https://ipadresse/nagiosql um die Installation abzuschliessen." 
+echo "Installation of NagiosCore and NagiosQL is finished.Please visit https://ipadresse/nagiosql and follow the wizard." 
 read -n 1 -s -r -p "Drücke eine Taste sobald die NagiosQL Installation via Webinterface angeschlossen ist und die Konfigurationen importiert bzw. erstellt wurden.\n"
 #Erst weiter wenn Konfig angepasst und erstellt.
 echo "Wir räumen nun noch etwas auf...\n" 
