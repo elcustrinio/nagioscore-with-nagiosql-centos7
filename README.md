@@ -19,7 +19,7 @@ These are:
 
 - During the Installation Process you will be ask for the libssh2 prefix. Default its autodetected if you wanna use this confirm with enter
 
-After NagiosQL is installed you see a message that the Installation is done and you should visit http://ipadress/nagiosql and follow the wizard. Here are the PrintScreens with the Settings you need:
+After NagiosQL is installed you see a message that the Installation is done and you should visit http://ipadress/nagiosql and follow the wizard.Do not click any button until the wizard is not completed. Here are the PrintScreens with the Settings you need:
 
 ![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-installation-wizard-01.png)
 Since, we are running NagiosQL installation wizard for the first time and there isn’t any settings.php file exists in config folder, therefore the wizard is giving us the following warning “Settings file not found or not readable (config/settings.php). Upgrade not available!” It is save to ignore it.
