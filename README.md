@@ -19,5 +19,5 @@ These are:
 
 - During the Installation Process you will be ask for the libssh2 prefix. Default its autodetected if you wanna use this confirm with enter
 - After NagiosQL is installed visit http://ipadress/nagiosql and follow the steps.
-- the 
+
 
