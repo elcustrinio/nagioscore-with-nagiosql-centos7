@@ -7,7 +7,7 @@ nagiospluginsversion=2.2.1
 nagiosuser=nagiosadmin
 nagiosuserpassword=nagiosadmin
 
-#From here nothing more change except password for MariaDB server.
+#From here nothing more change except password for MariaDB server on Line 59 and 60
 
 yum install -y gcc glibc glibc-common wget unzip httpd php gd gd-devel perl postfix wget bzip2
 sed -i 's/SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
