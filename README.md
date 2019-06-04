@@ -22,3 +22,25 @@ These are:
 After NagiosQL is installed you see a message that the Installation is done and you should visit http://ipadress/nagiosql and follow the wizard. Here are the PrintScreens with the Settings you need:
 
 ![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-installation-wizard-01.png)
+Since, we are running NagiosQL installation wizard for the first time and there isn’t any settings.php file exists in config folder, therefore the wizard is giving us the following warning “Settings file not found or not readable (config/settings.php). Upgrade not available!” It is save to ignore it.
+
+Click on START INSTALLATION
+
+![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-installation-wizard-02.png)
+NagiosQL installation wizard is checking for requirments and will give warnings, if a prerequisite is missing.
+If you have followed the steps above correctly, then it won’t give you any warning.
+
+Click on Next
+
+![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-installation-wizard-03.png)
+Define the settings according to the above screenshot.
+
+Click on Next
+
+![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-installation-wizard-04.png)
+
+Click on Next
+
+![alt text](https://github.com/elcustrinio/nagioscore-with-nagiosql-centos7/blob/master/NagiosQL%20Web%20Wizard/nagiosql-installation-wizard-05.png)
+
+
