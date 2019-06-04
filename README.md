@@ -3,6 +3,8 @@ applications and services. It monitors targets (i.e. hosts and services) and ale
 second time when the problem has been resolved. Nagios Core is primary application and monitoring and alerting engine, around that 
 hundred of Nagios Projects are built.
 
+Nagios Core is an free and open source Nework, Server and Application monitoring software. A drawback of Nagios Core is that it lacks a configuration tool, therefore we have to edit configurations files using a text editor. Manually editing configuration files is always a headache and highly prone to typostatic errors.NagiosQL is a web based configurator for Nagios Core. It completely integrates with Nagios Core and makes configuration management much easier. 
+
 
 With this script you install Nagios Core with NagiosQL on CentOs7.
 
